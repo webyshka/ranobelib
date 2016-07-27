@@ -20,6 +20,7 @@ return [
                 ],
             ],
         ],
+        'db' => require('../../common/config/db.php'),
     ],
     'params' => $params,
 ];

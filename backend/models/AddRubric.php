@@ -5,9 +5,9 @@ use yii\base\Model;
 use common\models\User;
 
 /**
- * Signup form
+ * AddRubric
  */
-class SignupForm extends Model
+class AddRubric extends Model
 {
     public $name;
     public $description;
@@ -23,19 +23,16 @@ class SignupForm extends Model
     public function rules()
     {
         return [
-            ['username', 'trim'],
-            ['username', 'required'],
-            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This username has already been taken.'],
-            ['username', 'string', 'min' => 2, 'max' => 255],
+            ['name', 'trim'],
+            ['name', 'required'],
+            ['name', 'string', 'min' => 2, 'max' => 255],
 
-            ['email', 'trim'],
-            ['email', 'required'],
-            ['email', 'email'],
-            ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
+            ['description', 'trim'],
+            ['sort_order', 'integer'],
 
-            ['password', 'required'],
-            ['password', 'string', 'min' => 6],
+            ['seo_title', 'trim'],
+            ['seo_description', 'trim'],
+            ['seo_url', 'trim'],
         ];
     }
 

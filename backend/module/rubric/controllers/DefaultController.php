@@ -3,6 +3,7 @@
 namespace app\module\rubric\controllers;
 
 use yii\web\Controller;
+use backend\models\AddRubric;
 
 /**
  * Default controller for the `rubric` module
@@ -18,7 +19,16 @@ class DefaultController extends Controller
         return $this->render('index');
     }
 
-    public function actionAddrubric() {
-        return $this->render('addrubric');
+    public function actionAdd() {
+        $model = new AddRubric();
+
+        if($model->load(\Yii::$app->request->post()) && $model->validate()){
+
+            print 'Успешно добавлено';
+            die;
+
+        }
+
+        return $this->render('add',['model'=>$model]);
     }
 }
