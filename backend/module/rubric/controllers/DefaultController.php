@@ -17,4 +17,8 @@ class DefaultController extends Controller
     {
         return $this->render('index');
     }
+
+    public function actionAddrubric() {
+        return $this->render('addrubric');
+    }
 }
