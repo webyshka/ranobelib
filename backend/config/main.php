@@ -13,7 +13,7 @@ return [
     'bootstrap' => ['log'],
     'modules' => [
         'gii' =>[
-            'class' => 'yii\gii\Models',
+            'class' => 'yii\gii\Module',
         ],
     ],
     'components' => [
