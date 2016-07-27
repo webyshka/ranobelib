@@ -5,6 +5,6 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'db' => require('db.php'),
+        'db' => require(dirname(__DIR__).'/config/db.php'),
     ],
 ];

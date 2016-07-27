@@ -8,7 +8,7 @@ $form = \yii\bootstrap\ActiveForm::begin();
 <?=$form->field($model,'seo_title')?>
 <?=$form->field($model,'seo_description')->textarea()?>
 <?=$form->field($model,'seo_url')?>
-<button type="submit">Добавить</button>
+<?=\yii\helpers\Html::submitButton('Добавить',['class' => 'btn btn-success'])?>
 <?
 \yii\bootstrap\ActiveForm::end();
 ?>
