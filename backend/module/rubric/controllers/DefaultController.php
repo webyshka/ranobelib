@@ -23,8 +23,8 @@ class DefaultController extends Controller
         $model = new AddRubric();
 
         if($model->load(\Yii::$app->request->post()) && $model->validate()){
-
-            print 'Успешно добавлено';
+            $results = \Yii::$app->request->post();
+            var_dump($results);
             die;
 
         }
