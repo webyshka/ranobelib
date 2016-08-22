@@ -14,21 +14,18 @@ class DefaultController extends Controller
      * Renders the index view for the module
      * @return string
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         return $this->render('index');
     }
 
-    public function actionAdd() {
+    public function actionEdit() {
         $model = new AddRubric();
 
         if($model->load(\Yii::$app->request->post()) && $model->validate()){
-            $results = \Yii::$app->request->post();
-            var_dump($results);
+            return 'Категория успешно добавлена';
             die;
-
         }
 
-        return $this->render('add',['model'=>$model]);
+        return $this->render('edit',['model' => $model]);
     }
 }

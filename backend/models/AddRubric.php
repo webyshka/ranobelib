@@ -2,57 +2,42 @@
 namespace backend\models;
 
 use yii\base\Model;
-use common\models\User;
+use common\models\Rubrics;
 
 /**
  * AddRubric
  */
-class AddRubric extends Model
-{
-    public $name;
+class AddRubric extends Model {
+
+    public $title;
     public $description;
     public $sort_order;
-    public $seo_title;
-    public $seo_description;
+    public $meta_title;
+    public $meta_description;
     public $seo_url;
-
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
-            ['name', 'trim'],
-            ['name', 'required'],
-            ['name', 'string', 'min' => 2, 'max' => 255],
-
-            ['description', 'trim'],
+            [['title','description','meta_title','meta_description','seo_url'], 'trim'],
+            ['title', 'required'],
             ['sort_order', 'integer'],
-
-            ['seo_title', 'trim'],
-            ['seo_description', 'trim'],
-            ['seo_url', 'trim'],
         ];
     }
 
-    /**
-     * Signs user up.
-     *
-     * @return User|null the saved model or null if saving fails
-     */
-    public function signup()
-    {
-        if (!$this->validate()) {
-            return null;
+    public function add() {
+
+        $rubric = new Rubrics();
+        $rubric->title = $this->title;
+        $rubric->seo_url = $this->seo_url;
+        $rubric->description = $this->description;
+        $rubric->meta_title = $this->meta_title;
+        $rubric->meta_description = $this->meta_description;
+
+        if($rubric->save()) {
+            return $rubric;
         }
-
-        $user = new User();
-        $user->username = $this->username;
-        $user->email = $this->email;
-        $user->setPassword($this->password);
-        $user->generateAuthKey();
-
-        return $user->save() ? $user : null;
     }
 }
