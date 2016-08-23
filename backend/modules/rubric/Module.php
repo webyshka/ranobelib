@@ -1,6 +1,6 @@
 <?php
 
-namespace app\module\rubric;
+namespace app\modules\rubric;
 
 /**
  * rubric module definition class
@@ -10,7 +10,7 @@ class Module extends \yii\base\Module
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'app\module\rubric\controllers';
+    public $controllerNamespace = 'app\modules\rubric\controllers';
 
     /**
      * @inheritdoc

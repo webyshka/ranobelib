@@ -28,7 +28,6 @@ class AddRubric extends Model {
     }
 
     public function add() {
-
         $rubric = new Rubrics();
         $rubric->title = $this->title;
         $rubric->seo_url = $this->seo_url;

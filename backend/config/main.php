@@ -16,7 +16,7 @@ return [
             'class' => 'yii\gii\Module',
         ],
         'rubric' => [
-            'class' => 'app\module\rubric\Module',
+            'class' => 'app\modules\rubric\Module',
         ],
     ],
     'components' => [
