@@ -34,7 +34,7 @@ class Rubrics extends ActiveRecord
             [['title', 'description', 'meta_title', 'meta_description', 'seo_url'], 'required'],
             [['description'], 'string'],
             [['sort_order'], 'integer'],
-            [['title', 'meta_title', 'meta_description', 'seo_url'], 'string', 'max' => 255],
+            [['title', 'image', 'meta_title', 'meta_description', 'seo_url'], 'string', 'max' => 255],
         ];
     }
 
@@ -44,13 +44,17 @@ class Rubrics extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'rubric_id' => 'Rubric ID',
-            'title' => 'Title',
-            'description' => 'Description',
-            'meta_title' => 'Meta Title',
-            'meta_description' => 'Meta Description',
-            'sort_order' => 'Sort Order',
-            'seo_url' => 'Seo Url',
+            'rubric_id' => 'ID',
+            'title' => 'Название',
+            'image' => 'Картинка',
+            'description' => 'Описание',
+            'meta_title' => 'Название(meta)',
+            'meta_description' => 'Описание(meta)',
+            'sort_order' => 'Сортировка',
+            'seo_url' => 'seo',
         ];
+    }
+    public function afterValidate() {
+
     }
 }

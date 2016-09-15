@@ -10,6 +10,7 @@ use common\models\Rubrics;
 class AddRubric extends Model {
 
     public $title;
+    public $image;
     public $description;
     public $sort_order;
     public $meta_title;
@@ -21,7 +22,7 @@ class AddRubric extends Model {
      */
     public function rules() {
         return [
-            [['title','description','meta_title','meta_description','seo_url'], 'trim'],
+            [['title','image','description','meta_title','meta_description','seo_url'], 'trim'],
             ['title', 'required'],
             ['sort_order', 'integer'],
         ];
@@ -30,6 +31,7 @@ class AddRubric extends Model {
     public function add() {
         $rubric = new Rubrics();
         $rubric->title = $this->title;
+        $rubric->image = $this->image;
         $rubric->seo_url = $this->seo_url;
         $rubric->description = $this->description;
         $rubric->meta_title = $this->meta_title;

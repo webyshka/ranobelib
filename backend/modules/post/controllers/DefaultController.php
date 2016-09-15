@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\rubric\controllers;
+namespace app\modules\post\controllers;
 
 use yii\web\Controller;
 
@@ -15,6 +15,7 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $module = \Yii::$app->getModule('post');
+        return $this->render('index',['module' => $module]);
     }
 }

@@ -2,14 +2,15 @@
 
 namespace backend\models;
 
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Rubrics;
+use common\models\Chapters;
 
 /**
- * AddRubricSearch represents the model behind the search form about `common\models\Rubrics`.
+ * AddChapterSearch represents the model behind the search form about `common\models\Chapters`.
  */
-class AddRubricSearch extends Rubrics
+class AddChapterSearch extends Chapters
 {
     /**
      * @inheritdoc
@@ -17,8 +18,8 @@ class AddRubricSearch extends Rubrics
     public function rules()
     {
         return [
-            [['rubric_id', 'sort_order'], 'integer'],
-            [['title', 'image', 'description', 'meta_title', 'meta_description', 'seo_url'], 'safe'],
+            [['id', 'rubric_id', 'sort_order'], 'integer'],
+            [['title', 'description', 'meta_title', 'meta_description', 'seo_url'], 'safe'],
         ];
     }
 
@@ -40,7 +41,7 @@ class AddRubricSearch extends Rubrics
      */
     public function search($params)
     {
-        $query = Rubrics::find();
+        $query = Chapters::find();
 
         // add conditions that should always apply here
 
@@ -58,6 +59,7 @@ class AddRubricSearch extends Rubrics
 
         // grid filtering conditions
         $query->andFilterWhere([
+            'id' => $this->id,
             'rubric_id' => $this->rubric_id,
             'sort_order' => $this->sort_order,
         ]);

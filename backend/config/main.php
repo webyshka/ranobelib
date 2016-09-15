@@ -11,12 +11,13 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
+    'defaultRoute' => 'post/rubric',
     'modules' => [
         'gii' =>[
             'class' => 'yii\gii\Module',
         ],
-        'rubric' => [
-            'class' => 'app\modules\rubric\Module',
+        'post' => [
+            'class' => 'app\modules\post\Module',
         ],
     ],
     'components' => [
@@ -48,6 +49,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'post' => 'post/default/index',
             ],
         ],
         'db' => [

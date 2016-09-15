@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\rubric\controllers;
+namespace app\modules\post\controllers;
 
 use Yii;
 use common\models\Rubrics;
