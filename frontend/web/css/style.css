@@ -1,0 +1,377 @@
+/*
+Theme Name: RanobeLib
+Theme URI: https://RanobeLib.ru/
+Author: Webyshka
+Author URI: https://RanobeLib.ru/
+Description: RanobeLib
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ranobelib
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+body {
+	background-image: url(img/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.navbar-default {
+	border-radius: 0px!important;
+}
+.clear {
+	clear: both;
+}
+.category-block {
+	padding: 0px 20px 20px 20px;
+	background: #fff;
+}
+.category-block .image {
+	display: inline-block;
+	float: left;
+	max-width: 210px;
+}
+.category-block .right-content {
+	display: inline-block;
+	max-width: 620px;
+	padding: 10px 0 10px 20px;
+}
+.category-block .right-content h2{
+	font-size: 18px;
+	margin: 0 0 10px 0;
+	line-height: 18px;
+}
+
+.category-block .description {
+	display: inline-block;
+	float: left;
+}
+.category-block .attributes {
+	display: inline-block;
+	float: left;
+}
+.category-block .item-list {
+	padding: 0 10px 10px 10px;
+	background: #f5f5f5;
+	margin-top: 20px;
+}
+.category-block .item-list .item {
+	min-height: 0px;
+	padding: 5px;
+	background: #fff;
+	margin: 0 0 5px 0;
+}
+.category-block .item-list>h2 {
+	font-size: 18px;
+	line-height: 18px;
+	margin: 0;
+	padding: 10px 0;
+}
+.attributes ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.attributes ul li {
+	padding: 0 0 5px 0;
+}
+.attributes ul li span {
+	border-bottom: 1px dashed;
+}
+.marketing {
+	margin-top: 20px;
+}
+.marketing span.image-category {
+	position: relative;
+	display: inline-block;
+	background: url(img/picture.png) no-repeat;
+	width: 16px;
+	height: 16px;
+	top: 3px;
+	padding: 0 0 0 5px;
+	margin-right: 5px;
+}
+.marketing span.image-category img {
+	position: absolute;
+	padding: 5px;
+	background-color: #e5e5e5;
+	border-radius: 5px;
+	max-height: 200px;
+	max-width: 240px;
+	width: auto;
+	display: none;
+	left: 16px;
+	z-index: 2;
+	cursor: pointer;
+}
+.marketing span.image-category:hover img,
+.marketing span.image-category img:hover {
+	display: block;
+}
+ul#menu-menyu-verh li ul.sub-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 350px;
+	padding: 10px;
+	list-style: none;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+ul#menu-menyu-verh li ul.sub-menu li {
+	padding: 5px;
+}
+ul#menu-menyu-verh li:hover ul.sub-menu {
+	display: block;
+}
+.single {
+	padding: 80px 15px 15px 15px;
+}
+.single-post .single-block {
+	padding: 15px 20px;
+	background: #fff;
+}
+.single-post .single-block table {
+	margin: 5px 0;
+}
+.single-post .single-block table td {
+	padding: 10px;
+	background-color: #f9e497;
+	border: 3px double #c5c5c5;
+}
+.single-post .single-block table td>strong {
+	font-size: 16px;
+}
+.single-post .single-block table td p {
+	font-size: 14px!important;
+	line-height: 16px!important;
+}
+.single-post .single-block h1 {
+	font-size: 23px;
+	margin-top: 10px;
+	border: 0 solid #efefef;
+	border-bottom-width: 1px;
+	padding-bottom: 10px;
+}
+.single-post .single-block p {
+	font-size: 16px;
+	text-align: justify;
+	line-height: 24px;
+}
+.category-post .category-block h1 {
+	font-size: 20px;
+	border: 0 solid #efefef;
+	border-bottom-width: 1px;
+	padding-bottom: 5px;
+}
+.marketing h2 {
+	color: #262626;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 16px;
+	margin: 0;
+	display: inline-block;
+}
+.marketing .last-post h2  {
+	font-size: 14px;
+}
+.marketing .col-md-6>h2  {
+	padding: 10px 5px 5px 5px;
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-weight: 500;
+	border-bottom: 1px dashed;
+}
+.marketing h2 a {
+	font-weight: 600;
+}
+.marketing .card .info {
+	display: inline-block;
+	float: right;
+}
+.marketing .card .info a {
+	color: #6b6b6b;
+	border-bottom: 1px dashed #ccc;
+	text-decoration: none;
+}
+.marketing .card .info a:hover {
+	border-bottom: 1px dashed transparent;
+}
+.navbar-default .navbar-collapse {
+	overflow: hidden;
+}
+.card {
+	padding: 7px;
+	margin: 0 0 5px 0px;
+	letter-spacing: -0.4px;
+}
+.item-cat {
+	padding: 0 5px;
+}
+.item-cat .panel {
+	margin: 0;
+}
+.marketing .panel {
+	box-shadow: none!important;
+}
+.item-cat .panel .name {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	min-height: 71px;
+	font-weight: 500;
+}
+.popular-categories {
+	display: inline-block;
+	width: 100%;
+	padding: 0 10px;
+	margin-top: 80px;
+}
+
+.footer {
+	margin-top: 20px;
+	background-color: #f4f4f4;
+	padding: 20px 0;
+	min-height: 160px;
+}
+.footer p{
+	margin: 0;
+}
+.category {
+	padding-top: 70px;
+}
+.info-block h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	text-align: right;
+}
+.info-block .chapter .chapter-prev {
+	display: inline-block;
+	float: left;
+	padding: 10px 0;
+}
+.info-block .chapter .chapter-next {
+	display: inline-block;
+	float: right;
+	padding: 10px 0;
+}
+.info-block .chapter a {
+	border-bottom: 1px dashed;
+}
+.info-block .chapter a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+.info-block .category-link a {
+	font-size: 13px;
+}
+.sidebar ul {
+	list-style: none;
+	padding: 0 5px 5px 15px;
+}
+.sidebar ul li {
+	font-size: 13px;
+}
+.sidebar .panel-heading {
+	padding: 10px 15px 0 15px;
+}
+.sidebar .popular-category .panel-heading h4 {
+	margin-bottom: 0px;
+}
+
+.new-chapter span.image-category {
+	position: relative;
+	display: inline-block;
+	background: url(img/picture.png) no-repeat;
+	width: 16px;
+	height: 16px;
+	top: 3px;
+	padding: 0 5px 0 0;
+}
+.new-chapter span.image-category img {
+	position: absolute;
+	padding: 5px;
+	background-color: #e5e5e5;
+	border-radius: 5px;
+	max-height: 200px;
+	max-width: 240px;
+	width: auto;
+	display: none;
+	right: 15px;
+	top: -15px;
+	z-index: 2;
+	cursor: pointer;
+}
+.new-chapter span.image-category:hover img,
+.new-chapter span.image-category img:hover {
+	display: block;
+}
+.ranobe .item-cat {
+	padding: 0 5px 10px 5px;
+}
+.ads_block ins {
+	display: block!important;
+	margin: 0 auto 20px auto!important;
+}
+.item-cat .image {
+	position: relative;
+}
+.item-cat .image img{
+	margin: 0 auto;
+}
+.item-cat .image span.count {
+	position: absolute;
+	top: 5px;
+	background: #e28b00;
+	color: #fff;
+	right: 0;
+	padding: 5px 10px;
+}
+.navbar {
+	margin-bottom: 0;
+}
+@media (max-width: 992px) {
+	.marketing .card .info {
+		display: inline-block;
+		float: none;
+		width: 100%;
+		text-align: right;
+		padding-top: 7px;
+	}
+	.item-cat {
+		padding: 5px;
+	}
+}
+@media (max-width: 480px) {
+	.item-cat .panel .name {
+		font-size: 13px;
+		min-height: 80px;
+	}
+	.item-cat {
+		padding: 5px;
+	}
+	.category-link {
+		display: none;
+	}
+}
+.ads-block {
+	display: table;
+	margin: 0 auto;
+}

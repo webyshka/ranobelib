@@ -11,6 +11,14 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => [
+        'rubric' => [
+            'class' => 'frontend\modules\rubric\Module',
+        ],
+        'chapter' => [
+            'class' => 'frontend\modules\chapter\module',
+        ],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -41,6 +49,13 @@ return [
             'showScriptName' => false,
             'rules' => [
             ],
+        ],
+        'db' => [
+            'class' => '\yii\db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=ranobelib',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
         ],
     ],
     'params' => $params,

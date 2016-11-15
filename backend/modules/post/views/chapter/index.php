@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'rubric_id',
             'title:ntext',
-            'description:ntext',
+            //'description:ntext',
             'meta_title',
             // 'meta_description',
             // 'seo_url:url',

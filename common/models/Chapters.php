@@ -55,4 +55,13 @@ class Chapters extends \yii\db\ActiveRecord
             'sort_order' => 'Sort Order',
         ];
     }
+
+
+    public function getChapterUrl($absolute = false) {
+        if($absolute) {
+            $url = Yii::$app->urlManager->createAbsoluteUrl(['/chapter/default/index', 'id' => $this->id]);
+        } else $url = Yii::$app->urlManager->createUrl(['/chapter/default/index', 'id' => $this->id]);
+
+        return $url;
+    }
 }

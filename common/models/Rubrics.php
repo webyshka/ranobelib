@@ -3,7 +3,7 @@
 namespace common\models;
 
 use \yii\db\ActiveRecord;
-
+use Yii;
 /**
  * This is the model class for table "rubric".
  *
@@ -56,5 +56,13 @@ class Rubrics extends ActiveRecord
     }
     public function afterValidate() {
 
+    }
+
+    public function getRubricUrl($absolute = false) {
+        if($absolute) {
+            $url = Yii::$app->urlManager->createAbsoluteUrl(['/rubric/default/single', 'rubric_id' => $this->rubric_id]);
+        } else $url = Yii::$app->urlManager->createUrl(['/rubric/default/single', 'rubric_id' => $this->rubric_id]);
+
+        return $url;
     }
 }
