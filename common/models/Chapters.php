@@ -64,4 +64,5 @@ class Chapters extends \yii\db\ActiveRecord
 
         return $url;
     }
+
 }

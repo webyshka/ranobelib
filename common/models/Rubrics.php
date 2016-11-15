@@ -66,4 +66,8 @@ class Rubrics extends ActiveRecord
 
         return $url;
     }
+
+    public function getLogoUrl() {
+        return '/statics/images/rubric/' . $this->image;
+    }
 }
