@@ -9,6 +9,7 @@ use backend\models\AddChapterSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * ChapterController implements the CRUD actions for Chapters model.
@@ -82,7 +83,8 @@ class ChapterController extends Controller {
     public function actionCreate() {
         $model = new Chapters();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

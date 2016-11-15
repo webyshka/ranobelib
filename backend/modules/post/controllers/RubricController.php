@@ -8,6 +8,7 @@ use backend\models\AddRubricSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * RubricController implements the CRUD actions for Rubrics model.
@@ -65,7 +66,15 @@ class RubricController extends Controller
     {
         $model = new Rubrics();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+            //var_dump($model->image);
+            if($model->image !== null) {
+                $model->image->saveAs( $_SERVER['DOCUMENT_ROOT'] . '/statics/images/rubric/'. $model->image->name);
+                $model->image = '/statics/images/rubric/'.$model->image->name;
+            }
+
+            $model->save();
             return $this->redirect(['view', 'id' => $model->rubric_id]);
         } else {
             return $this->render('create', [

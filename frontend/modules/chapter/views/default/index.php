@@ -3,10 +3,7 @@
 $this->title = $chapter->meta_title;
 $this->registerMetaTag([ 'name' => 'description', 'content' =>  $chapter->meta_description]);
 $this->registerMetaTag([ 'name' => 'title', 'content' =>  $chapter->meta_title]);
-
 ?>
-<div class="container single">
-    <div class="row">
         <div class="col-md-9 single-post">
             <div class="single-block panel panel-default">
                     <div class="info-block">
@@ -28,9 +25,6 @@ $this->registerMetaTag([ 'name' => 'title', 'content' =>  $chapter->meta_title])
                     <br>
                     <p><strong>Поддержите проект! Кликните по рекламе и сделайте там пару переходов. Спасибо за помощь проекту!</strong></p>
                     <br>
-
-
-
                     <div class="info-block">
                         <div class="chapter">
                             <div class="chapter-prev">
@@ -43,6 +37,4 @@ $this->registerMetaTag([ 'name' => 'title', 'content' =>  $chapter->meta_title])
             </div>
         </div>
 
-    </div>
-</div>
 

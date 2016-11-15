@@ -1,8 +1,6 @@
 <?
 use yii\helpers\Html;
 ?>
-<div class="container">
-    <div class="row category">
         <div class="col-md-9 category-post">
             <div class="category-block panel panel-default">
                 <h1><?=$rubric->title?> ранобэ читать</h1>
@@ -23,19 +21,16 @@ use yii\helpers\Html;
                     </div>
                 </div>
                 <div class="clear"></div>
-                    <div class="row-fluid">
-                        <div class="item-list">
-                            <h2>Главы</h2>
-                            <? foreach ($chapters as $chapter) { ?>
-                                <div class="item col-md-12">
-                                    <?= Html::a('<span class="chapter-'.$chapter->id.'"></span>' . $chapter->title, $chapter->getChapterUrl())?>
-                                </div>
-                            <? } ?>
-                            <div class="clear"></div>
-                        </div>
+                <div class="row-fluid">
+                    <div class="item-list">
+                        <h2>Главы</h2>
+                        <? foreach ($chapters as $chapter) { ?>
+                            <div class="item col-md-12">
+                                <?= Html::a('<span class="chapter-'.$chapter->id.'"></span>' . $chapter->title, $chapter->getChapterUrl())?>
+                            </div>
+                        <? } ?>
+                        <div class="clear"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>

@@ -10,7 +10,6 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
-
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -26,7 +25,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-    <div id="subnav">
+<div id="subnav">
     <?php
     NavBar::begin();
     $menuItems = [
@@ -34,24 +33,30 @@ AppAsset::register($this);
         ['label' => 'Завершенные', 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
     ];?>
-        <?=Nav::widget([
-            'options' => [
-                'class' => 'navbar-nav',
-                'id' => 'nav'
-            ],
-            'items' => $menuItems,
-        ]);
-        NavBar::end();
-        ?>
-    </div>
+    <?=Nav::widget([
+        'options' => [
+            'class' => 'navbar-nav',
+            'id' => 'nav'
+        ],
+        'items' => $menuItems,
+    ]);
+    NavBar::end();
+    ?>
+</div>
 
-    <div class="container ">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+<div class="container ">
+    <?= Breadcrumbs::widget([
+        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+    ]) ?>
+    <?= Alert::widget() ?>
+
+    <div class="container single">
+        <div class="row">
+            <?=$content ?>
+            <?= $this->render('partial/sidebar'); ?>
+        </div>
     </div>
+</div>
 <footer class="footer">
     <div class="container">
         <p>Designed and built by</p>

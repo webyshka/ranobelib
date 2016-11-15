@@ -16,10 +16,12 @@ class DefaultController extends Controller
      * Renders the index view for the module
      * @return string
      */
+
+    public $layout = '/other';
     public function actionIndex() {
         $chapter = Chapters::find()->where(Yii::$app->request->queryParams)->one();
         $rubric = Rubrics::find()->where(['rubric_id' => $chapter->rubric_id])->one();
-        //$rubric->url = Yii::$app->urlManager->createUrl(['/chapter/default/index', 'id' => $chapter->rubric_id]);
+        // $sidebar = new
         return $this->render('index' ,[
             'chapter'=> $chapter,
             'rubric'=> $rubric,

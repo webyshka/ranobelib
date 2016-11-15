@@ -34,7 +34,8 @@ class Rubrics extends ActiveRecord
             [['title', 'description', 'meta_title', 'meta_description', 'seo_url'], 'required'],
             [['description'], 'string'],
             [['sort_order'], 'integer'],
-            [['title', 'image', 'meta_title', 'meta_description', 'seo_url'], 'string', 'max' => 255],
+            [['title', 'meta_title', 'meta_description', 'seo_url'], 'string', 'max' => 255],
+            [['image'], 'file', 'extensions' => 'png, jpg'],
         ];
     }
 
