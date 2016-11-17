@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use kartik\widgets\FileInput;
+use kartik\file\FileInput;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Rubrics */
@@ -23,14 +23,14 @@ use kartik\widgets\FileInput;
             'multiple'=> false,
         ],
         'pluginOptions' => [
-            'initialPreview'=> $model->image ? [Html::img($model->getLogoUrl(),  ['class'=>'file-preview-image'])] : [],
+            'initialPreview'=> $model->image ? [Html::img('http://'.$_SERVER['SERVER_NAME'] . $model->image,  ['class'=>'file-preview-image'])] : [],
             'previewFileType' => 'any',
             'showUpload' => false,
             'showRemove' => true,
             'overwriteInitial'=>true,
         ],
     ])->label(false) ?>
-    <?= $form->field($model, 'image')->fileInput() ?>
+
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
     <?= $form->field($model, 'meta_title')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'meta_description')->textInput(['maxlength' => true]) ?>

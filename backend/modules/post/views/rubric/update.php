@@ -5,9 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Rubrics */
 
-$this->title = 'Update Rubrics: ' . $model->title;
+$this->title = 'Обновление Рубрики: ' . $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Rubrics', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->rubric_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="rubrics-update">
